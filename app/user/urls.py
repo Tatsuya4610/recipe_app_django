@@ -5,7 +5,8 @@ from django.urls import path
 
 from user import views
 
-
+# user/tests/test_user_api.py 12行目 CREATE_USER_URL = reverse('user:create')
+#  逆引き参照に使用。
 app_name = 'user'
 
 urlpatterns = [
