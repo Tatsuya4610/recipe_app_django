@@ -403,7 +403,7 @@ class ImageUploadTests(TestCase):
         with tempfile.NamedTemporaryFile(suffix='.jpg') as image_file:
             img = Image.new('RGB', (10, 10))  # テスト用画像作成
             img.save(image_file, format='JPEG')
-            image_file.seek(0)
+            image_file.seek(0)  #ファイルの先頭に戻る。
             payload = {'image': image_file}
             res = self.client.post(url, payload, format='multipart')
 
